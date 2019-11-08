@@ -46,7 +46,7 @@ class ViewController: NSViewController {
 extension ViewController: WebPolicyDelegate {
 
     func webView(_ webView: WebView, decidePolicyForMIMEType type: String, request: URLRequest, frame: WebFrame, decisionListener listener: WebPolicyDecisionListener) {
-        if let url = request.url?.absoluteString, url.starts(with: "data:application/xml;") {
+        if let url = request.url?.absoluteString, url.starts(with: "data:application/xml;") || url.hasSuffix(".xml") {
             listener.download()
             return
         }

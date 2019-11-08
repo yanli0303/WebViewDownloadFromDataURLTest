@@ -6,7 +6,11 @@
   <title>Download File from Data URL</title>
   <style type="text/css">
     a {
-      display: inline-block;
+      display: block;
+      margin-top: 1rem;
+    }
+
+    div {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -16,8 +20,10 @@
 </head>
 
 <body>
-  <a
-    href="data:application/xml;charset=utf-8;text,%3C?xml%20version=%221.0%22%20encoding=%22UTF-8%22?%3E%0A%3Croot%3EHello%20World%3C/root%3E">Download</a>
+    <div>
+        <a href="data:application/xml;charset=utf-8;text,%3C?xml%20version=%221.0%22%20encoding=%22UTF-8%22?%3E%0A%3Croot%3EHello%20World%3C/root%3E">Download - Data URI</a>
+        <a href="test.xml">Download - test.xml</a>
+    </div>
 </body>
 
 </html>
